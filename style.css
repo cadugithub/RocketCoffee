@@ -1,0 +1,185 @@
+:root {
+  --backgrond: #000;
+  --text-color: #FFF;
+  --button: #8257E5;
+  --border: #29292E;
+  --border-menu-mobile: #A8A8B3;
+  --text-color-menu-mobile: #E1E1E6;
+  }
+  *{
+    font-family: 'Manrope', sans-serif;
+    font-size: 62.5%;
+    padding: 0;
+    margin: 0;
+  }
+  body{
+    height: 100%;
+    width: 100%;
+    background: url(./assets/blur-mobile.png)no-repeat bottom center;
+    background-size: 100%;
+    background-color: #000;
+  }
+  body h1{
+    font-size: 3rem;
+    color: white;
+  }
+  
+  header{
+    margin-top: 37px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 20px;
+    padding-right: 5%;
+    padding-left: 5%;
+    margin-bottom: 50px;
+    height: 60px;
+    box-sizing: border-box;
+  }
+  #logo-desktop{
+    display: none;
+  }
+  #mobile-phrase{
+  font-size: 3rem;
+  }
+  .buguerAtttchement{
+    padding:20px;
+    cursor: pointer;
+  }
+  
+  #menu-buguer-close{
+    display: none;
+  }
+  h1{
+    text-align: center;
+    margin: 0 auto;
+  }
+  .button{
+    box-sizing: border-box;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    gap: 7px;
+
+    color: white;
+    background-color: transparent;
+    border: 1px solid var(--button);
+    padding: 10px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+  .button:hover{
+    background-color:var(--button);
+  }
+  main{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8rem;
+    margin:0 auto;
+    width: 500px;
+    height: 100%;
+  }
+  #big-device-phrase{
+    display: none;
+  }
+  #menu{
+    display: none;
+  }
+  #nav.active #menu{
+    display: block;
+    width: 100%;
+    height: calc(100% + 97px);
+    position: absolute;
+    z-index: 1000;
+
+    background-color: var(--backgrond); 
+    top: 97px;
+    right: 0;
+
+    overflow-y: auto;
+  }
+  #nav.active #menu-buguer-close{
+    display: block;
+    padding:20px;
+    cursor: pointer;
+  }
+  #nav.active #menu-buguer-open{
+    display: none;
+  }
+  #menu a{
+    box-sizing: border-box;
+    text-decoration: none;
+    font-size: 1.8rem;
+    color: var(--text-color-menu-mobile);
+    display: block;
+    border-bottom: var(--border-menu-mobile) solid 0.2px;
+    padding: 1.7rem 0;
+    padding-left: 3rem;
+    transition: background 0.5s;
+  }
+  
+  #btn-big-screen{
+    display: none;
+  }
+  #rocket-coffee{
+    width: 80%;
+  }
+/*=============BIG-SCREEN======================= */
+@media (min-width: 1100px) {
+   
+  body{
+    background: url(./assets/blur-1.png) no-repeat bottom left, url(./assets/blur-2.png) no-repeat top right;
+    background-color: black;
+  }
+  header{
+    border: none;
+    padding: 20px 150px;
+  }
+  #logo-desktop{
+    display: block;
+  }
+  #logo-mobile{
+    display: none;
+  }
+  #menu{
+    box-sizing: border-box;
+    display: flex;
+    gap:60px;
+  }
+  #menu a{
+    box-sizing: border-box;
+    border: none;
+    padding: 0;
+  }
+  #menu a:hover{
+    background-color: none;
+    border-bottom: 1px solid var(--button);
+  }
+  #btn-big-screen{
+    display: flex;
+    align-items: center;
+    
+  }
+  #btn-mobile{
+    display: none;
+  }
+  #menu-buguer-open{
+    display: none;
+  }
+  #mobile-phrase{
+    display: none;
+  }
+  #big-device-phrase{
+    display: block;
+    font-size: 8rem;
+  }
+  #rocket-coffee{
+    width: 100%;
+  }
+}
