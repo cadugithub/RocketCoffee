@@ -132,7 +132,6 @@
   }
 /*=============BIG-SCREEN======================= */
 @media (min-width: 1100px) {
-   
   body{
     background: url(./assets/blur-1.png) no-repeat bottom left, url(./assets/blur-2.png) no-repeat top right;
     background-color: black;
